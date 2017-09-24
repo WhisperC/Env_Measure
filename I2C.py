@@ -1,18 +1,12 @@
-import smbus  
-import time  
+import wiringpi
 
-# 打开 /dev/i2c-1  
-bus = smbus.SMBus(1)  
+fd = wiringpi.wiringPiI2CSetup(0x40)
+temp_org = wiringpi.wiringPiI2CReadReg8(fd, 0x03)
+humd_org = wiringpi.wiringPiI2CReadReg8(fd, 0x05)
 
-def SHT20_Measure():
-  pass
-
-xxx
-print('fuck')
-
-
-for i in range(0,4):
-  bus.write_byte( 0x20 , (1<<i) )
-  time.sleep(0.1)  # delay 100ms
-while True:
-  pass
+temp = (temp_org << 8) | temp_org
+humd = (humd_org << 8) | humd_org
+T = -46.85 + 175.72 / 65536 * temp
+RH = -6.0 + 125.0 / 65536 * humd
+print("Current Temperature=", T)
+print("Relative Humidity=", RH)
