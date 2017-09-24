@@ -5,11 +5,10 @@ import time
 bus = smbus.SMBus(1)  
 
 def SHT20_Measure():
+  pass
 
-
-
-
-
+xxx
+print('fuck')
 
 
 for i in range(0,4):
