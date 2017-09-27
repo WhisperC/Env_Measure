@@ -58,7 +58,7 @@ class Test:
                         tempo_PRain = 40-(Temp_Scale-Mea_Temp)
                         tempo_PSun = 20
         else:
-            if Mea_Temp>15
+            if Mea_Temp>15:
                 tempo_PSun  = 70 - (Illu_Scale-Mea_Illu)
                 tempo_PRain = 25 + (Illu_Scale-Mea_Illu)
                 tempo_PSnow = 5
@@ -99,9 +99,9 @@ def get_Humid():
     RH = -6.0 + 125.0 / 65536 * humd
     return RH
 
-Illu=getIlluminance()
+
+a=Test(0,0,0)
+a.P_generate(get_Temp(),get_Humid(),getIlluminance(),20)
+print(a.PRain)
 
 
-print("Current Temperature=", T)
-print("Relative Humidity=", RH)
-print("illu=", Illu)
