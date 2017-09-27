@@ -132,8 +132,8 @@ def get_songlist(cls):
     return lists
 
 
-if __name__ == '__main__':
-#     # create_database()
-#     # add_song_list()
-    add_song()
-    pass
+# if __name__ == '__main__':
+# #     # create_database()
+# #     # add_song_list()
+#     add_song()
+#     pass

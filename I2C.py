@@ -72,7 +72,7 @@ class Test:
         self.PSnow = tempo_PSnow
         self.PSun = tempo_PSun
 
-    def function_test(self, psun, prain, psnow):
+    def function_test(self, prain, psnow, psun):
         self.PSun = psun
         self.PSnow = psnow
         self.PRain = prain
