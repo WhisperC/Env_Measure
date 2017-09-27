@@ -13,9 +13,9 @@ Base = declarative_base()
 class SongLists(Base):
     __tablename__ = 'songlists'
     id = Column(Integer, primary_key=True)
-    arg_a = Column(Integer)
-    arg_b = Column(Integer)
-    arg_c = Column(Integer)
+    PRain = Column(Integer)
+    PSnow = Column(Integer)
+    PSun = Column(Integer)
     name = Column(String(200), unique=True)
     songs = relationship("Songs")
 
@@ -23,19 +23,19 @@ class SongLists(Base):
 class Songs(Base):
     __tablename__ = 'songs'
     id = Column(Integer, primary_key=True)
-    arg_a = Column(Integer)
-    arg_b = Column(Integer)
-    arg_c = Column(Integer)
+    PRain = Column(Integer)
+    PSnow = Column(Integer)
+    PSun = Column(Integer)
     name = Column(String(200), unique=True)
     belong_list_id = Column(Integer, ForeignKey('songlists.id'))
 
     belong_list = relationship("SongLists")
 
 
-class Test:
-    def __init__(self, arg_a, arg_b, arg_c):
-        self.arg_a = arg_a
-        self.arg_b = arg_b
-        self.arg_c = arg_c
+# class Test:
+#     def __init__(self, PRain, PSnow, PSun):
+#         self.PRain = PRain
+#         self.PSnow = PSnow
+#         self.PSun = PSun
 
 

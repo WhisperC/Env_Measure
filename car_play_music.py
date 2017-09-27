@@ -5,8 +5,11 @@ import tkinter
 import pygame
 from use_sqlite import *
 from weather_api import weathernow
+from I2C import *
 
-ss = Test(1, 43, 90)
+
+ss = Test()
+ss.function_test(20, 70, 10)  # li add code
 
 # str_a = 'aurora - 森罗万象.mp3'
 # print(str_a.encode('utf-8'))
