@@ -7,6 +7,7 @@ Illu_Scale = 0
 Temp_Scale = 15
 Rain_Scale = 5
 # BH1750 ADDR
+
 __DEV_ADDR=0x23
 
 
